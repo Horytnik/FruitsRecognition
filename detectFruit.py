@@ -14,7 +14,7 @@ dfPredTable = pd.DataFrame()
 
 # modelFilename = 'finalized_model.sav'
 
-modelFilename = 'my_model3.sav'
+modelFilename = 'my_model.sav'
 fruitNames = ['OrgFileName','Apple', 'Banana', 'Carambola', 'Guava', 'Kiwi', 'Mango', 'NoFruit', 'Orange', 'Peach', 'Pear', 'Persimmon', 'Pitaya', 'Plum', 'Pomegranate', 'Tomato', 'muskmelon']
 
 loaded_model = pickle.load(open(modelFilename, 'rb'))

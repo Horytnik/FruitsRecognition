@@ -28,7 +28,7 @@ prediction = loaded_model.predict(images)
 dfPred = pd.concat( [pd.DataFrame(fruitFilenames),pd.DataFrame(prediction)], axis = 1)
 dfPred.columns = fruitNames
 
-print('End part1')
+print('End part 1')
 
 cap = cv2.VideoCapture(0)
 

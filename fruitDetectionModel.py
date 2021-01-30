@@ -108,46 +108,6 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 
 print(model.summary())
 
-### OTHER MODEL
-
-# shape_img = (150, 150, 3)
-#
-# model2 = Sequential()
-#
-# model2.add(Conv2D(filters=32, kernel_size=(3, 3), input_shape=shape_img, activation='relu', padding='same'))
-# model2.add(MaxPooling2D(pool_size=(2, 2)))
-#
-# model2.add(Conv2D(filters=64, kernel_size=(3, 3), input_shape=shape_img, activation='relu', padding='same'))
-# model2.add(MaxPooling2D(pool_size=(2, 2)))
-#
-# model2.add(Conv2D(filters=64, kernel_size=(3, 3), input_shape=shape_img, activation='relu', padding='same'))
-# model2.add(MaxPooling2D(pool_size=(2, 2)))
-#
-# model2.add(Conv2D(filters=64, kernel_size=(3, 3), input_shape=shape_img, activation='relu', padding='same'))
-# model2.add(MaxPooling2D(pool_size=(2, 2)))
-#
-# model2.add(Conv2D(filters=64, kernel_size=(3, 3), input_shape=shape_img, activation='relu', padding='same'))
-# model2.add(MaxPooling2D(pool_size=(2, 2)))
-#
-# model2.add(Conv2D(filters=64, kernel_size=(3, 3), input_shape=shape_img, activation='relu', padding='same'))
-# model2.add(MaxPooling2D(pool_size=(2, 2)))
-#
-# model2.add(Flatten())
-#
-# model2.add(Dense(256))
-# model2.add(Activation('relu'))
-# model2.add(Dropout(0.5))
-#
-# model2.add(Dense(len(mappedNames)))
-# model2.add(Activation('softmax'))
-#
-# model2.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-
-##########################
-
-
-
-
 # loading the images
 fruitImages = []
 fruitLabels = []
@@ -183,27 +143,6 @@ plt.legend(['train', 'test'], loc='upper left')
 # plt.ylim(0.5, 1)
 # plt.ylim(0, 1)
 plt.show()
-
-
-#### model 2
-
-# history = model2.fit(fruitImages, fruitLabels, validation_split=0.1, epochs=100, batch_size=128)
-# # summarize history for accuracy
-# plt.figure()
-# plt.plot(history.history['accuracy'])
-# plt.plot(history.history['val_accuracy'])
-# plt.title('model accuracy')
-# plt.ylabel('accuracy')
-# plt.xlabel('epoch')
-# plt.legend(['train', 'test'], loc='upper left')
-# # plt.ylim(0.5, 1)
-# # plt.ylim(0, 1)
-# plt.show()
-
-##############
-
-# scores = model.evaluate(imgTest, labelTest, verbose=0)
-# print("Accuracy: %.2f%%" % (scores[1]*100))
 
 filename = 'my_model3.sav'
 pickle.dump(model, open(filename, 'wb'))

@@ -1,7 +1,7 @@
 # Fruits Recognition
-Recognition of fruits based on photos
+Recognition of fruits in live camera based on photos
 
-# Introduction
+# Results
 The aim of the project was to create an algorithm which can recognize fruits from live camera view. The result is shown in below example of four fruits. 
 
 <img src = "https://github.com/Horytnik/FruitsRecognition/blob/master/FruitRecognitionWorkingExample.gif" />
@@ -14,6 +14,16 @@ The distribution of fruits photos is shown below:
 Final model accuracy is shown below:
 
 <img src = "https://github.com/Horytnik/FruitsRecognition/blob/master/readmeImages/modelAccuracy.jpg" />
+
+# Description
+In the project were used different types of photos, like groups of fruits, different landscapes and also no fruit detection. At the beginning photos were sorted into groups and augmented to have more samples which gaves around 150k of photos. Randomly selected 30k was used to train the model. Used model is sequential CNN model with kernel size [3,3] and relu as activation function. 
+
+# Main parts od the model
+* Conv2D - convolutional layer. It performs convolution which is a linear operation that involves the multiplication of a set of weights with the input.
+* MaxPooling2D - it is an operation which took maximum value from selected are which allows to downsample the picture.
+* Flatten - It transforms a two-dimensional matrix of features into a vector which can be connected to clasifier.
+* Dense - layer which connects input with output.
+* Dropout - randomly removes the desired amount of connections between neurons.
 
 # Files explanation
 
